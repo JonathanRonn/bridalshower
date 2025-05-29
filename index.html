@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridal Shower Invitation - Kelsey Ronn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #ffeef8 0%, #f8f4ff 50%, #fff5f5 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(255, 182, 193, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(221, 160, 221, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(255, 228, 225, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .invitation-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.1),
+                0 0 0 1px rgba(255, 255, 255, 0.2);
+            padding: 60px 50px;
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            position: relative;
+            border: 2px solid #f0e6ff;
+        }
+
+        .invitation-container::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, #ffeef8, #f8f4ff, #fff5f5, #ffeef8);
+            border-radius: 25px;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .access-denied {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.1),
+                0 0 0 1px rgba(255, 255, 255, 0.2);
+            padding: 60px 50px;
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            position: relative;
+            border: 2px solid #ffcccc;
+        }
+
+        .access-denied h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #8b4f8b;
+            margin-bottom: 20px;
+        }
+
+        .access-denied p {
+            font-size: 1.2rem;
+            color: #6b4c6b;
+            line-height: 1.6;
+        }
+
+        .floral-accent {
+            font-size: 2.5rem;
+            color: #d8a7ca;
+            margin-bottom: 20px;
+        }
+
+        .invitation-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.8rem;
+            color: #8b4f8b;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #9b7d9b;
+            margin-bottom: 40px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .bride-name {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            color: #6b4c6b;
+            margin: 30px 0;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .event-details {
+            background: rgba(248, 244, 255, 0.7);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+            border: 1px solid #e6d7ff;
+        }
+
+        .date-time {
+            font-size: 2rem;
+            color: #7a5a7a;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .rsvp-section {
+            background: rgba(255, 245, 245, 0.8);
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 30px;
+            border: 1px solid #ffe0e6;
+        }
+
+        .rsvp-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: #8b4f8b;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .rsvp-details {
+            font-size: 1.3rem;
+            color: #6b4c6b;
+            line-height: 1.8;
+            font-weight: 400;
+        }
+
+        .rsvp-phone {
+            font-weight: 600;
+            color: #8b4f8b;
+            text-decoration: none;
+            border-bottom: 1px dotted #8b4f8b;
+            transition: all 0.3s ease;
+        }
+
+        .rsvp-phone:hover {
+            color: #a66ba6;
+            border-bottom-color: #a66ba6;
+        }
+
+        .decorative-line {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #d8a7ca, transparent);
+            margin: 30px 0;
+            border-radius: 1px;
+        }
+
+        .heart-decoration {
+            font-size: 1.5rem;
+            color: #d8a7ca;
+            margin: 0 15px;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 768px) {
+            .invitation-container, .access-denied {
+                padding: 40px 30px;
+                margin: 10px;
+            }
+            
+            .bride-name {
+                font-size: 3rem;
+            }
+            
+            .invitation-title {
+                font-size: 2.2rem;
+            }
+            
+            .date-time {
+                font-size: 1.6rem;
+            }
+            
+            .rsvp-details {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .invitation-container, .access-denied {
+                padding: 30px 20px;
+            }
+            
+            .bride-name {
+                font-size: 2.5rem;
+            }
+            
+            .invitation-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Access Denied Message (shown by default) -->
+    <div id="access-denied" class="access-denied">
+        <div class="floral-accent">🔒</div>
+        <h1>Private Invitation</h1>
+        <p>This invitation is private and can only be accessed with a special link.<br><br>
+        If you believe you should have access, please contact the host.</p>
+        <div class="floral-accent" style="margin-top: 30px; margin-bottom: 0;">🌸</div>
+    </div>
+
+    <!-- Invitation Content (hidden by default) -->
+    <div id="invitation-content" class="invitation-container hidden">
+        <div class="floral-accent">🌸</div>
+        
+        <h1 class="invitation-title">You're Invited</h1>
+        <p class="subtitle">To a Bridal Shower</p>
+        
+        <div class="decorative-line"></div>
+        
+        <h2 class="bride-name">Kelsey Ronn</h2>
+        
+        <div class="decorative-line"></div>
+        
+        <div class="event-details">
+            <div class="date-time">
+                <span class="heart-decoration">💕</span>
+                1-3pm • June 22, 2025
+                <span class="heart-decoration">💕</span>
+            </div>
+        </div>
+        
+        <div class="rsvp-section">
+            <h3 class="rsvp-title">Please RSVP</h3>
+            <div class="rsvp-details">
+                Karen Ronn<br>
+                <a href="tel:306-221-9518" class="rsvp-phone">306-221-9518</a>
+            </div>
+        </div>
+        
+        <div class="floral-accent" style="margin-top: 30px; margin-bottom: 0;">🌿</div>
+    </div>
+
+    <script>
+        // Secret token for access - change this to whatever you want
+        const SECRET_TOKEN = 'kelsey-shower-2025';
+        
+        // Check if the correct token is in the URL
+        function checkAccess() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const token = urlParams.get('invite');
+            
+            if (token === SECRET_TOKEN) {
+                // Show invitation, hide access denied
+                document.getElementById('invitation-content').classList.remove('hidden');
+                document.getElementById('access-denied').classList.add('hidden');
+            }
+            // If no token or wrong token, access denied message stays visible
+        }
+        
+        // Run the access check when page loads
+        window.addEventListener('load', checkAccess);
+    </script>
+</body>
+</html> 
