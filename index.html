@@ -216,6 +216,14 @@
             .rsvp-details {
                 font-size: 1.1rem;
             }
+            
+            .date-time .desktop-date {
+                display: none;
+            }
+            
+            .date-time .mobile-date {
+                display: block;
+            }
         }
 
         @media (max-width: 480px) {
@@ -230,6 +238,14 @@
             .invitation-title {
                 font-size: 1.8rem;
             }
+        }
+
+        .mobile-date {
+            display: none;
+        }
+
+        .desktop-date {
+            display: block;
         }
     </style>
 </head>
@@ -257,12 +273,22 @@
         
         <div class="event-details">
             <div class="date-time">
-                <span class="heart-decoration">☀️</span>
-                Saturday, June 22, 2025
-                <span class="heart-decoration">☀️</span>
+                <div class="desktop-date">
+                    <span class="heart-decoration">🌻</span>
+                    Saturday, June 22, 2025
+                    <span class="heart-decoration">🌻</span>
+                </div>
+                <div class="mobile-date">
+                    <div style="margin-bottom: 8px;">
+                        <span class="heart-decoration">🌻</span>
+                        Saturday
+                        <span class="heart-decoration">🌻</span>
+                    </div>
+                    <div>June 22, 2025</div>
+                </div>
             </div>
             <div class="time-line" style="font-size: 1.8rem; color: #8d4e00; margin-top: 10px; font-weight: 400;">
-                🕐 1-3pm
+                🕐 1-4pm
             </div>
             <div class="location" style="font-size: 1.5rem; color: #8d4e00; margin-top: 15px; font-weight: 400;">
                 🏠 610 Forsyth Crescent
